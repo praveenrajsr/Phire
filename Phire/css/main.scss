@@ -1,0 +1,127 @@
+$mobile: 574px;
+$green-btn: rgb(12, 151, 23);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin small{
+    @media(max-width: 352px){
+        @content
+    }
+}
+.hide{
+    display: none;
+}
+.main-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0% 5%;
+    box-shadow: 25px 0 50px grey;
+    margin-bottom: 40px;
+    @include small{
+        flex-flow: column wrap;
+    }
+    .mob-number{
+        padding-top: 40px;
+        font-weight: bold;
+    }
+}
+.termsandconditionswrapper{
+    text-align: center;
+    margin: 25px;
+    .termsandconditions{
+        text-align: center;
+        padding: 50px;
+        border: 1px solid black;
+        @media (max-width: $mobile) {
+            font-size: 0.8em;
+        }
+        h1{
+            @media (max-width: $mobile) {
+                font-size: 1.1em;
+            }
+        }
+        p{
+            padding: 10px 90px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            @media (max-width: $mobile) {
+                padding: 0;
+            }
+        }
+        ul{
+            list-style-type:square;
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            @media (max-width: $mobile) {
+                margin-left: 0;
+                transform: translateX(0%);
+            }
+            li{
+                margin-top: 15px;
+            }
+        }
+    }
+    .next-btn{
+        margin-top: 15px;
+        padding: 15px 25px;
+        background-color: $green-btn;
+        border-radius: 20px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+.time-section{
+    position: sticky;
+    right: 150px;
+    margin-top: -55px;
+    top: 10px;
+    float: right;
+    @media screen and (max-width: $mobile) {
+        right: 0;
+    }
+}
+.main-first-ques-container{
+    font-weight: 500;
+    margin-bottom: 25px;
+    .main-ques-wrapper{
+        margin-left: 50px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 100px;
+        @media screen and (max-width: $mobile) {
+            margin-left: 0px;
+        }
+    }
+    .main-questions{
+        .opt-label{
+            margin-left: 8px;
+        }
+        p{
+            margin-bottom: 5px;
+        }
+        .single-ques-choice-wrapper{
+            margin-left: 15px;
+        }
+    }
+    .btn-style{
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-weight: 100;
+    }
+    .sub-next{
+        margin-left: 40%;
+        transform: translateX(-40%);
+        @media (max-width: $mobile) {
+            margin-left: 0%;
+            transform: translateX(0%);
+        }
+    }
+}
