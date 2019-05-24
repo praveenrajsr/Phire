@@ -109,7 +109,7 @@
   position: -webkit-sticky;
   position: sticky;
   right: 150px;
-  margin-top: -55px;
+  margin-top: 0px;
   top: 10px;
   float: right;
 }
