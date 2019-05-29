@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../img/wm.png");
+  background-position: 100px 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  top: 20px;
+  text-align: right;
+  padding: 20px 100px 20px 0;
+}
+
+.logo img {
+  height: 80px;
+}
+
+header {
+  position: relative;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  padding: 50px 20px 0px 100px;
+}
+
+main span {
+  display: inline-block;
+}
+
+main .result {
+  text-align: center;
+  width: 200px;
+}
+
+main .email-result {
+  width: 500px !important;
+}
+
+main .title {
+  font-weight: 700;
+}
+
+main p {
+  padding-top: 20px;
+}
+
+main .first_second span {
+  display: inline-block;
+}
+
+main .program_applied {
+  background: transparent;
+}
+
+main .program_applied span:nth-child(2) {
+  margin-left: 20px;
+}
+
+main .program_applied .direct_rec {
+  margin-left: 200px;
+}
+
+main .present_details span {
+  margin-left: 580px;
+}
+
+main .result {
+  border-bottom: 2px solid black;
+}
+
+main .table {
+  background: transparent !important;
+  margin-bottom: 80px;
+}
+
+@media print {
+  main .table {
+    margin-bottom: 350px;
+  }
+}
+
+main .family_result {
+  text-align: center;
+  width: 70%;
+  border-bottom: 2px solid black;
+}
+
+main .family-details {
+  width: 100%;
+}
+
+main .date-result {
+  text-align: center;
+  width: 5%;
+  border-bottom: 2px solid black;
+}
+
+main .date-inp {
+  margin-left: 150px;
+}
+
+main .dob_result {
+  width: 35%;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+/*# sourceMappingURL=main.css.map */
