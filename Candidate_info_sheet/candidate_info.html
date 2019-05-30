@@ -17,10 +17,13 @@
         <h1>CANDIDATE INFORMATION SHEET</h1>
     </header> <hr>
     <main>
+            <div id="waterMark" style="position:absolute">
+               <img src="./img/wm.png" width=1024 height=1024 border=0></a>
+            </div>
         <p class="first_second">
             <span class="title">First Name:</span>&nbsp;&nbsp;&nbsp; 
             <span class="result">kannan</span> &nbsp;&nbsp;
-            <span class="title">Second Name:</span>&nbsp;&nbsp;&nbsp; 
+            <span class="title second-name">Second Name:</span>&nbsp;&nbsp;&nbsp; 
             <span class="result">Malai</span> 
         </p>
         <p>
@@ -37,7 +40,7 @@
             &nbsp;&nbsp;&nbsp; <span class="result">Male</span>
         </p> <br>
         <p class="present_details">
-            <h4>PRESENT ADDRESS:</h4> <hr> <br>
+            <h4>PRESENT ADDRESS:</h4> <span class="family_result"></span>  <br> <br>
             <span class="title">City:</span> &nbsp;&nbsp;&nbsp;<span class="result">Chennai</span> &nbsp;
             <span class="title">State:</span>&nbsp;&nbsp;&nbsp; <span class="result">Tamilnadu</span>&nbsp;&nbsp;
             <span class="title">pincode:</span>&nbsp;&nbsp;&nbsp;<span class="result">600044</span>&nbsp;
@@ -90,6 +93,9 @@
             <div class="logo">
                 <img src="./img/Phire.png" alt="">
             </div>
+            <div id="waterMark" style="position:absolute">
+                <img src="./img/wm.png" width=1024 height=1024 border=0></a>
+            </div>
             <h3>Details of Family:</h3>
             <p class="first_second">
                 <span class="title">Father's Name:</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -125,7 +131,7 @@
                 <span class="title">Total Annual Family Income:</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="family_result">Rs.100000</span> 
             </p> <br>
-            <h3> Permanent Address</h3> <hr>
+            <h3> Permanent Address</h3> <span class="family_result"></span> <br>
             <p class="first_second">
                 <span class="title">City:</span>&nbsp;&nbsp;&nbsp; 
                 <span class="result">Chennai</span> &nbsp;&nbsp;
@@ -166,10 +172,18 @@
                 <span class="title date-inp">Date</span>&nbsp;&nbsp;&nbsp; 
                 <span class="date-result"></span>/<span class="date-result"></span>/<span class="date-result"></span> 
             </p>
-        </div>
+        </div> <br>
+        <div class="text-center">
+            <button onclick="printfunc()" class="btn-print">print</button>
+        </div> <br>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        function printfunc() {
+          window.print();
+        }
+    </script>
 </body>
 </html>

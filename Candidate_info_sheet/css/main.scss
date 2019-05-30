@@ -3,13 +3,40 @@
     margin: 0;
     padding: 0;
 }
-.main-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../img/wm.png');
-    background-position: 100px 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
+.text-center{
+    text-align: center;
 }
+.btn-print{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #004a9e;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+// @media print {
+    // body{
+        // font-family: Arial, Helvetica, sans-serif;
+        // background-image: url('../img/wm.png');
+        // background-position: center;
+        // background-size: 2024px;
+        // background-repeat: repeat-y;
+        // background-position-x: 0%;
+        // background-position-y: 0%;
+        // background-attachment: fixed;
+//     }
+// }
+// .main-body{
+    // font-family: Arial, Helvetica, sans-serif;
+    // background-image: url('../img/wm.png');
+    // background-position: center;
+    // background-size: 2024px;
+    // background-repeat: repeat-y;
+    // background-position-x: 0%;
+    // // background-position-y: 0%;
+    // // background-attachment: fixed;
+// }
 .logo{
     top: 20px;
     text-align: right;
@@ -32,6 +59,9 @@ main{
         text-align: center;
         width: 200px;
         // padding-left: 150px;
+    }
+    .second-name{
+        margin-left: 80px;
     }
     .email-result{
         width: 500px !important;
@@ -93,6 +123,5 @@ main{
     .dob_result{
         width: 35%;
         text-align: center;
-        border-bottom: 2px solid black;
     }
 }
