@@ -20,6 +20,8 @@ $(document).ready(() => {
         if ($("input[name=" + current_name + "]").is(":checked")) {
             console.log($current.attr('data-qnum'))
             $("." + current_ques_num).addClass('green');
+        } else {
+            $("." + current_ques_num).addClass('red');
         }
         $current.toggleClass("hide");
         $current = $current.next();
@@ -42,6 +44,8 @@ function attribute(data) {
 
     if ($("input[name=" + current_name + "]").is(":checked")) {
         $("." + current_ques_num).addClass('green');
+    } else {
+        $("." + current_ques_num).addClass('red');
     }
     $current.toggleClass('hide');
     $current.removeClass('active');
@@ -49,8 +53,21 @@ function attribute(data) {
     while ($current.attr('data-qnum') != jumpnumber) {
         if ($current.attr('data-qnum') > jumpnumber) {
             $current = $current.prev();
+            current_name = $current.children().find('input').attr('name');
+            $current_div = $current.attr('data-qnum');
+            console.log(current_name + $current_div)
+            if ($("input[name=" + current_name + "]").val() == '') {
+                $("." + $current_div).addClass('yellow');
+            }
+
         } else if ($current.attr('data-qnum') < jumpnumber) {
             $current = $current.next();
+            current_name = $current.children().find('input').attr('name');
+            $current_div = $current.attr('data-qnum');
+            console.log(current_name + $current_div)
+            if ($("input[name=" + current_name + "]").val() == '') {
+                $("." + $current_div).addClass('yellow');
+            }
         } else {
 
         }
