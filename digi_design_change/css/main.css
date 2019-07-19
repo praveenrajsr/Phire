@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .pre-header {
+  background: #000;
+  color: #fff;
+  padding: 15px 85px 15px 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .pre-header .icon {
+  color: white;
+}
+
+@media screen and (max-width: 472px) {
+  body .pre-header {
+    padding: 15px 0 15px 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: 0.9em;
+  }
+}
+
+body header nav img {
+  border: none !important;
+  background: transparent !important;
+  height: 100px;
+  width: 151px;
+}
+
+body .line {
+  width: 100%;
+  height: 3px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#36b791), to(#d0e02c));
+  background-image: linear-gradient(to left, #36b791, #d0e02c);
+}
+
+body main .landing-page {
+  background: url("../img/banner.jpg");
+  color: #fff;
+}
+
+body main .landing-page .banner-bg {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(71, 71, 71, 0.8)), to(rgba(61, 61, 61, 0.8))), url(../img/banner.jpg) no-repeat;
+  background: linear-gradient(0deg, rgba(71, 71, 71, 0.8), rgba(61, 61, 61, 0.8)), url(../img/banner.jpg) no-repeat;
+}
+
+body main .full-landing-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 85px 50px 85px;
+  text-align: center;
+}
+
+@media screen and (max-width: 472px) {
+  body main .full-landing-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px 10px 15px 10px;
+  }
+}
+
+body main .full-landing-container h1 {
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 472px) {
+  body main .full-landing-container h1 {
+    font-size: 1.6em;
+    padding-top: 5px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+  }
+}
+
+body main .full-landing-container .left-side .module {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 472px) {
+  body main .full-landing-container .left-side .module {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  body main .full-landing-container .left-side .slogan {
+    margin-bottom: 0;
+    font-size: 0.8em;
+  }
+}
+
+body main .full-landing-container .left-side .rating {
+  font-size: 1em;
+}
+
+body main .right-side {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 25px 35px 25px 25px;
+}
+
+body main .right-side h5 {
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 15px;
+}
+
+body main .right-side input {
+  margin-bottom: 10px;
+  padding: 13px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  font-size: 0.8em;
+  height: 100%;
+}
+
+body .second-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 15px;
+  background: #ee0b31;
+  font-weight: 500 !important;
+  color: white;
+}
+
+@media screen and (max-width: 472px) {
+  body .second-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+}
+
+body .second-div .first-point {
+  padding-right: 15px;
+  padding: 12px 0;
+  font-weight: 100 !important;
+}
+
+body .second-div .second-point {
+  padding-right: 5px;
+  padding: 15px 0;
+  font-weight: 100 !important;
+}
+
+body section {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body section .screen {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body section .screen:hover {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+body section .screen:nth-child(1) {
+  background: #fff;
+}
+
+body section .screen:nth-child(2) {
+  background: #ff0;
+}
+
+body section .screen .card {
+  max-width: 300px;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=main.css.map */
