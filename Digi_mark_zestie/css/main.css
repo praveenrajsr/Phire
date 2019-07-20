@@ -1,7 +1,12 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
   margin: 0;
   padding: 0;
   font-family: Montserrat;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 .mi-main-container {
@@ -69,7 +74,7 @@
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-  z-index: 3;
+  z-index: 13;
 }
 
 .mi-main-container .mi-mob-nav .line-container .line {
@@ -105,6 +110,8 @@
 
 .mi-main-container .mi-mob-nav .mi-main-mob-nav-list {
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,18 +124,18 @@
           align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   opacity: 0.8;
   width: 100%;
   height: 0%;
   visibility: hidden;
-  padding: 20px;
   list-style: none;
   -webkit-transition: height ease-in 1s;
   transition: height ease-in 1s;
   -webkit-transition: height ease-in-out 1s;
   transition: height ease-in-out 1s;
+  z-index: 10;
 }
 
 .mi-main-container .mi-mob-nav .mi-main-mob-nav-list.show {
@@ -442,9 +449,201 @@
   height: 18px;
 }
 
+.curriculum {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #e74c3c;
+  color: white;
+  padding: 50px 20px;
+}
+
+.curriculum h2 {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.curriculum section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid white;
+}
+
+.curriculum input {
+  display: none;
+}
+
+.curriculum label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.curriculum label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.curriculum label[for*='1']:before {
+  content: '\f1cb';
+}
+
+.curriculum label[for*='2']:before {
+  content: '\f17d';
+}
+
+.curriculum label[for*='3']:before {
+  content: '\f16c';
+}
+
+.curriculum label[for*='4']:before {
+  content: '\f171';
+}
+
+.curriculum label:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+.curriculum input:checked + label {
+  color: white;
+  border: 1px solid #abc;
+  border-top: 2px solid #0af;
+  border-bottom: 1px solid #fff;
+}
+
+.curriculum #tab1:checked ~ #content1,
+.curriculum #tab2:checked ~ #content2,
+.curriculum #tab3:checked ~ #content3,
+.curriculum #tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .curriculum label {
+    font-size: 0;
+  }
+  .curriculum label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .curriculum label {
+    padding: 15px;
+  }
+}
+
+.middle-section {
+  padding: 80px 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(15%, #3C4BBD), to(transparent)), radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.2) 10%, transparent 20%) center center/15px 15px, -webkit-gradient(linear, left top, right bottom, from(#3C4BBD), to(#57ADD8));
+  background: linear-gradient(to bottom right, #3C4BBD 15%, transparent), radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.2) 10%, transparent 20%) center center/15px 15px, linear-gradient(to bottom right, #3C4BBD, #57ADD8);
+}
+
+.middle-section .wrapper {
+  position: relative;
+  -webkit-perspective: 40em;
+          perspective: 40em;
+  display: -ms-grid;
+  display: grid;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.middle-section .card {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  -webkit-transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+          transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: rgba(249, 198, 26, 0.88);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
+}
+
+.middle-section h1 {
+  font-size: 0.5em;
+  font-weight: 900;
+}
+
+.middle-section .card .enclosed {
+  background: #000;
+  line-height: 1;
+  color: #f9c61a;
+  padding: 5px 5px;
+  text-align: center;
+  display: inline-block;
+  -webkit-transform: translate(-1px, 1px) scale(0.75);
+          transform: translate(-1px, 1px) scale(0.75);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+}
+
+.middle-section .wrapper:before {
+  --bw: 9px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  content: '';
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  -webkit-transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+          transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid #000;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.middle-section .wrapper:hover > div,
+.middle-section .wrapper:hover:before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.middle-section .wrapper > div,
+.middle-section .wrapper:before {
+  will-change: transform;
+  -webkit-transition: 0.3s -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 1);
+  transition: 0.3s -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 1);
+  transition: 0.3s transform cubic-bezier(0.25, 0.46, 0.45, 1);
+  transition: 0.3s transform cubic-bezier(0.25, 0.46, 0.45, 1), 0.3s -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 1);
+}
+
 .mi-contact-section {
   text-align: center;
-  padding: 50px 0px;
+  padding: 50px 55px;
   color: #575757;
 }
 
@@ -456,18 +655,15 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 50px;
 }
 
 .mi-contact-section .mi-contact-me {
   text-align: left;
   line-height: 20px;
-}
-
-.mi-contact-section .mi-contact-me .contact-me-sub-head {
-  padding-bottom: 15px;
 }
 
 .mi-footer-container {

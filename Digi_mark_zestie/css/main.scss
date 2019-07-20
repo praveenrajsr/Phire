@@ -3,14 +3,16 @@ $secondary-color: #FFEE00;
 $dull-shade: #D5CDCD;
 $white: #fff;
 $main-heading-size: 5em;
+$orange: #e74c3c;
 $about-back-color: #009AE9;
 $primary-font: Montserrat;
 $sec-heading-size: 2em;
 $grey: #575757;
-
+$highlight: #5bc0eb;
+$darkhighlight: #fde74c; 
 $mobile: 790px;
 $desktop: 1024px;
-
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @mixin showmobile{
     @media (min-width: #{$mobile}) {
         @content;
@@ -27,6 +29,9 @@ $desktop: 1024px;
     margin: 0;
     padding: 0;
     font-family: $primary-font;
+}
+html,body{
+    overflow-x: hidden;
 }
 .mi-main-container{
     background-image: linear-gradient(90deg,rgba(255, 238, 0,0.8), rgba(255, 238, 0,0.8)), url('../assets/images/banner.jpg');
@@ -77,7 +82,7 @@ $desktop: 1024px;
             right: 20px;
             cursor: pointer;
             transition: all ease-in-out 0.5s;
-            z-index: 3;
+            z-index: 13;
             
             .line{
                 width: 25px;
@@ -105,19 +110,22 @@ $desktop: 1024px;
         }
         .mi-main-mob-nav-list{
             position: fixed;
+            top: 0;
+            left: 0;
             background-color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-flow: column;
+            flex-flow: column wrap;
             opacity: 0.8;
             width: 100%;
             height: 0%;
             visibility: hidden;
-            padding: 20px;
+            // padding: 20px;
             list-style: none;
             transition: height ease-in 1s;
             transition: height ease-in-out 1s;
+            z-index: 10;
             &.show{
                 height: 100% !important;
                 visibility: visible;
@@ -367,26 +375,178 @@ $desktop: 1024px;
     }
 }
 // Curriculum section
+.curriculum{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: $orange;
+    color: white;
+    padding: 50px 20px;
+    h2{
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    section {
+        display: none;
+        padding: 20px 0 0;
+        border-top: 1px solid rgb(255, 255, 255);
+    }
 
+    input {
+    display: none;
+    }
 
+    label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    }
+
+    label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+    }
+
+    label[for*='1']:before { content: '\f1cb'; }
+    label[for*='2']:before { content: '\f17d'; }
+    label[for*='3']:before { content: '\f16c'; }
+    label[for*='4']:before { content: '\f171'; }
+
+    label:hover {
+    color: #789;
+    cursor: pointer;
+    }
+
+    input:checked + label {
+    color: rgb(255, 255, 255);
+    border: 1px solid #abc;
+    border-top: 2px solid #0af;
+    border-bottom: 1px solid #fff;
+    }
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4 {
+    display: block;
+    }
+
+    @media screen and (max-width: 800px) {
+        label {
+            font-size: 0;
+        }
+        label:before {
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+
+        @media screen and (max-width: 500px) {
+        label {
+            padding: 15px;
+        }
+    }
+}
+.middle-section{
+    padding: 80px 0;
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(to bottom right, #3C4BBD 15%, transparent),
+        radial-gradient(circle at 100% 0%, rgba(255,255,255,.2) 10%, transparent 20%) center center / 15px 15px,
+        linear-gradient(to bottom right, #3C4BBD, #57ADD8);
+    .wrapper {
+        position: relative;
+        perspective: 40em;
+        display: grid;
+        transform-style: preserve-3d;
+      }
+      
+      .card {
+        grid-area: 1 / 1;
+        height: 200px;
+        width: 400px;
+        transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+        background: rgba(249, 198, 26, 0.88);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 60px;
+        font-weight: 900;
+        backface-visibility: hidden;
+        box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+      }
+      
+      h1 {
+        font-size: 0.5em;
+        font-weight: 900;
+      }
+      
+      .card .enclosed {
+        background: #000;
+        line-height: 1;
+        color: rgba(249, 198, 26, 1);
+        padding: 5px 5px;
+        text-align: center;
+        display: inline-block;
+        transform: translate(-1px, 1px) scale(0.75);
+        transform-origin: right center;
+      }
+      
+      .wrapper:before {
+        --bw: 9px;
+        grid-area: 1 / 1;
+        content: '';
+        backface-visibility: hidden;
+        height: 100%;
+        width: 100%;
+        margin-top: calc(-1 * var(--bw));
+        margin-left: calc(-1 * var(--bw));
+        background: transparent;
+        transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+        pointer-events: none;
+        border: var(--bw) solid #000;
+        box-sizing: content-box;
+      }
+      
+      
+      .wrapper:hover > div,
+      .wrapper:hover:before {
+        transform: none;
+      }
+      
+      
+      .wrapper > div,
+      .wrapper:before {
+        will-change: transform;
+        transition: .3s transform cubic-bezier(.25,.46,.45,1);
+      }
+}
 // contact section
 .mi-contact-section{
     text-align: center;
-    padding:50px 0px;
+    padding:50px 55px;
     color: $grey;
     .mi-contact-methods{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         padding-top: 50px;
     }
     .mi-contact-me {
         text-align: left;
         line-height: 20px;
 
-        .contact-me-sub-head{
-            padding-bottom: 15px;
-        }
+        // .contact-me-sub-head{
+        //     padding-bottom: 15px;
+        // }
     }
 }
 // footer
